@@ -1,0 +1,15 @@
+syntax = "proto3";
+package chat;
+
+option go_package = "github.com/rohitv5/grpc_golang_basic/types/known/chat";
+
+//message for mat expecting from client
+message Message {
+    string body = 1;
+
+}
+
+
+service ChatService {
+    rpc SayHello(Message) returns (Message) {}
+}
