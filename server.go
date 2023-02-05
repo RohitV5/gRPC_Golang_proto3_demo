@@ -10,25 +10,23 @@ import (
 
 //what is the difference between log and fmt?
 
-func main(){
-	lis,err := net.Listen("tcp",":9000")
+func main() {
+	lis, err := net.Listen("tcp", ":9000")
 
-	if(err != nil){
-	 log.Fatalf("Failed to listen on port %v",err)	
+	if err != nil {
+		log.Fatalf("Failed to listen on port %v", err)
 	}
 
-	s := chat.Server{
-		
+	s := chat.Server{}
+
+	grpcServer := grpc.NewServer()
+
+	chat.RegisterChatServiceServer(grpcServer, &s)
+
+	if err := grpcServer.Serve(lis); err != nil {
+		log.Fatalf("Failed to start grpc on port 9000 %v", err)
 	}
+
 	
-
-	grpcServer := grpc.NewServer();
-
-	chat.RegisterChatServiceServer(grpcServer,&s)
-
-	if err := grpcServer.Serve(lis); err != nil{
-		log.Fatalf("Failed to start grpc on port 9000 %v",err)
-	}
-
 
 }
