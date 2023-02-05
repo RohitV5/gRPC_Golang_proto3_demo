@@ -17,7 +17,9 @@ func main(){
 	 log.Fatalf("Failed to listen on port %v",err)	
 	}
 
-	s := chat.Server{}
+	s := chat.Server{
+		
+	}
 	
 
 	grpcServer := grpc.NewServer();

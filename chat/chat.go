@@ -7,7 +7,7 @@ import (
 )
 
 type Server struct {
-
+	UnimplementedChatServiceServer
 }
 
 //function 
