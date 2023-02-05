@@ -1,7 +1,7 @@
 syntax = "proto3";
 package chat;
 
-option go_package = "";
+option go_package = "./chat";
 
 //message for mat expecting from client
 message Message {

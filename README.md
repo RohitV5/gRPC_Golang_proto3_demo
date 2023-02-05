@@ -33,7 +33,8 @@ https://developers.google.com/protocol-buffers/docs/gotutorial
 3.Bin directory contains the protoc.exe
 4.Update the environment variable to point to the bin directory that contains the protoc.exe
 5.Re-Open the cmd as the environment variable take effect only on new command window
-6.run=> protoc --go_out=.\chat --go-grpc_out=.\chat   chat.proto 
+6.run=> protoc --go_out=. --go-grpc_out=.   chat.proto 
+// . means the folder will be current folder plus whatver is the option in proto file. 
 
 
 
