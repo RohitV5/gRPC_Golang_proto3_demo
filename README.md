@@ -44,3 +44,7 @@ Apps installed by go command are present in C:\Users\verma\go\bin. Add this to p
 Some issues resolved through these links
 https://github.com/grpc/grpc-go/issues/3794
 https://stackoverflow.com/questions/71777702/service-compiling-successfully-but-message-structs-not-generating-grpc-go
+
+//next task is to expose an endpoint in client and pass data over it. which passes data to grpc service.
+
+//ok do a rabbit mq build.
